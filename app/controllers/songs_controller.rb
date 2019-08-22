@@ -23,8 +23,8 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    @song.artist = Artist.find_or_create_by("artist")
-    @song.genre = Genre.find_or_create_by("genre")
+    @song.artist = Artist.find_or_create_by("name")
+    @song.genre = Genre.find_or_create_by("name")
     @song.save
     redirect_to song_path(@song)
   end
