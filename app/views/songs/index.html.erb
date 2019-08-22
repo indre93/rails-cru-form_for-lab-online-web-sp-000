@@ -1,6 +1,6 @@
-<h1>All Coupons Available</h1>
+<h1>All Songs:</h1>
   <div>
     <% @songs.each do |song| %>
-      <div><%= link_to song.name, song_path(song) %> - <%= song.name %></div>
+      <p><%= link_to song.name, song_path(song) %></p>
       <% end %>
   </div>
